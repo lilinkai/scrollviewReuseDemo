@@ -11,9 +11,16 @@ import UIKit
 class ReuseScrollView: UIView, UIScrollViewDelegate {
     
     private var contentScrollView:UIScrollView! = nil //滚动容器
+    
     private var imagesArray:[AnyObject]! = nil
+    private var descsArray:[String]! = nil
+    
     private var currentImageView:UIImageView! = nil //当前显示imageview
     private var nextImageView:UIImageView! = nil    //下一个显示的imageview
+    
+    private var descContentLabel:UILabel! = nil //描述的控件
+    
+    private var pageControl:UIPageControl! = nil    //页码控件
     
     private var currentIndex:Int = 0    //当前显示索引
     private var nextIndex:Int = 1       //下一个索引
@@ -23,8 +30,19 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         initSubView()
     }
     
-    internal func initDataSource(imagesValue:[AnyObject]){
+    struct styleConfig {
+        
+        
+    }
+    
+    internal func initDataSource(imagesValue:[AnyObject], descsValue:[String]){
         imagesArray = imagesValue
+        descsArray = descsValue
+        
+        if imagesArray.count != descsArray.count {
+            print("图片数量与描述数量不匹配!")
+            return
+        }
         
         contentScrollView.contentSize = CGSize.init(width: width*CGFloat(imagesArray.count), height: height)
         contentScrollView.contentOffset = CGPoint.init(x: width, y: 0)
@@ -34,6 +52,10 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         
         currentImageView.image = imagesArray[currentIndex] as? UIImage
         nextImageView.image = imagesArray[nextIndex] as? UIImage
+        
+        descContentLabel.text = descsArray[currentIndex]
+        
+        pageControl.numberOfPages = imagesArray.count
     }
     
     /**
@@ -43,6 +65,8 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         initContentScrollView()
         initCurrentImageView()
         initNextImageView()
+        initPageControl()
+        initDescribeLabel()
     }
     
     /**
@@ -54,7 +78,6 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         contentScrollView.pagingEnabled = true
         contentScrollView.showsHorizontalScrollIndicator = false
         contentScrollView.delegate = self
-        contentScrollView.backgroundColor = UIColor.redColor()
         self.addSubview(contentScrollView)
     }
     
@@ -63,7 +86,6 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
      */
     private func initCurrentImageView() {
         currentImageView = UIImageView.init(frame: contentScrollView.frame)
-        currentImageView.backgroundColor = UIColor.blueColor()
         contentScrollView.addSubview(currentImageView!)
     }
     
@@ -72,8 +94,29 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
      */
     private func initNextImageView() {
         nextImageView = UIImageView.init(frame: contentScrollView.frame)
-        nextImageView.backgroundColor = UIColor.blackColor()
         contentScrollView.addSubview(nextImageView!)
+    }
+    
+    /**
+     初始化分页显示控件
+     */
+    private func initPageControl(){
+        pageControl = UIPageControl.init(frame: CGRect.init(x: 0, y: self.height-20, width: width, height: 20))
+        pageControl.pageIndicatorTintColor = UIColor.grayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.blueColor()
+        self.addSubview(pageControl)
+    }
+    
+    /**
+     初始化内容描述显示控件
+     */
+    private func initDescribeLabel(){
+        descContentLabel = UILabel.init(frame: CGRect.init(x: 0, y: pageControl.top-10, width: width, height: 20))
+        descContentLabel.font = UIFont.systemFontOfSize(15.0)
+        descContentLabel.text = "暂无描述"
+        descContentLabel.textColor = UIColor.redColor()
+        descContentLabel.textAlignment = .Center
+        self.addSubview(descContentLabel)
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView){
@@ -117,6 +160,8 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         currentImageView.image = nextImageView.image
         contentScrollView.contentOffset = CGPoint.init(x: width, y: 0)
         currentIndex = nextIndex
+        pageControl.currentPage = currentIndex
+        descContentLabel.text = descsArray[currentIndex]
     }
 
 }

@@ -32,6 +32,18 @@ extension UIView{
         frame.origin.x = right + frame.size.width
     }
     
+    var top:CGFloat {return frame.origin.y}
+    var bottom:CGFloat {return superview!.height - (frame.origin.y + frame.size.height)}
+    
+    func setTop(top:CGFloat) {
+        frame.origin.y = top
+    }
+    
+    func setBottom(bottom:CGFloat) {
+        frame.origin.y = superview!.height - (bottom + frame.size.height)
+    }
+    
+    
     
     
 }
