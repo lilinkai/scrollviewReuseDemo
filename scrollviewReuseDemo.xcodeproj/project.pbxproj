@@ -15,6 +15,7 @@
 		A66508CD1D518F7800102A93 /* scrollviewReuseDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508CC1D518F7800102A93 /* scrollviewReuseDemoTests.swift */; };
 		A66508D81D518F7800102A93 /* scrollviewReuseDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508D71D518F7800102A93 /* scrollviewReuseDemoUITests.swift */; };
 		A66508EA1D5194E500102A93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508E91D5194E500102A93 /* UIViewExtension.swift */; };
+		A66508EC1D51D4A200102A93 /* ReuseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A66508D71D518F7800102A93 /* scrollviewReuseDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollviewReuseDemoUITests.swift; sourceTree = "<group>"; };
 		A66508D91D518F7800102A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A66508E91D5194E500102A93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A66508B71D518F7800102A93 /* AppDelegate.swift */,
 				A66508B91D518F7800102A93 /* ViewController.swift */,
 				A66508E91D5194E500102A93 /* UIViewExtension.swift */,
+				A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */,
 				A66508BB1D518F7800102A93 /* Main.storyboard */,
 				A66508BE1D518F7800102A93 /* Assets.xcassets */,
 				A66508C01D518F7800102A93 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 			files = (
 				A66508EA1D5194E500102A93 /* UIViewExtension.swift in Sources */,
 				A66508BA1D518F7800102A93 /* ViewController.swift in Sources */,
+				A66508EC1D51D4A200102A93 /* ReuseScrollView.swift in Sources */,
 				A66508B81D518F7800102A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,10 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zongying Yang (24V8F39EQY)";
 				INFOPLIST_FILE = scrollviewReuseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.gameLiving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0cf327ed-eaf8-4e83-ab22-2420c3f34789";
 			};
 			name = Debug;
 		};
@@ -414,10 +420,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zongying Yang (24V8F39EQY)";
 				INFOPLIST_FILE = scrollviewReuseDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.gameLiving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "0cf327ed-eaf8-4e83-ab22-2420c3f34789";
 			};
 			name = Release;
 		};
@@ -486,6 +494,7 @@
 				A66508DE1D518F7800102A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A66508DF1D518F7800102A93 /* Build configuration list for PBXNativeTarget "scrollviewReuseDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				A66508E11D518F7800102A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A66508E21D518F7800102A93 /* Build configuration list for PBXNativeTarget "scrollviewReuseDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				A66508E41D518F7800102A93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
