@@ -25,6 +25,8 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
     private var currentIndex:Int = 0    //当前显示索引
     private var nextIndex:Int = 1       //下一个索引
     
+    var queue:NSOperationQueue! = nil;  //图片加载队列
+    
     override func awakeFromNib() {
         print("加载xib")
         initSubView()
@@ -67,6 +69,7 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         initNextImageView()
         initPageControl()
         initDescribeLabel()
+        initQueue()
     }
     
     /**
@@ -117,6 +120,20 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         descContentLabel.textColor = UIColor.redColor()
         descContentLabel.textAlignment = .Center
         self.addSubview(descContentLabel)
+    }
+    
+    /**
+     初始化下载队列
+     */
+    private func initQueue(){
+        queue = NSOperationQueue()
+    }
+    
+    /**
+     下载图片方法
+     */
+    private func downImageData(){
+        
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView){
