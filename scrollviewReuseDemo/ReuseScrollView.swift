@@ -28,6 +28,9 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
     
     var queue:NSOperationQueue! = nil;  //图片加载队列
     
+    var fileName = ""
+    
+    
     override func awakeFromNib() {
         print("加载xib")
         initSubView()
@@ -48,6 +51,7 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         initPageControl()
         initDescribeLabel()
         initQueue()
+        createSaveImageFile()
     }
     
     /**
@@ -67,6 +71,7 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
      */
     private func initCurrentImageView() {
         currentImageView = UIImageView.init(frame: contentScrollView.frame)
+        currentImageView.contentMode = .ScaleAspectFill
         contentScrollView.addSubview(currentImageView!)
     }
     
@@ -75,6 +80,7 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
      */
     private func initNextImageView() {
         nextImageView = UIImageView.init(frame: contentScrollView.frame)
+        nextImageView.contentMode = .ScaleAspectFill
         contentScrollView.addSubview(nextImageView!)
     }
     
@@ -148,6 +154,26 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
     }
     
     /**
+     创建存放图片文件的沙盒文件夹
+     */
+    private func createSaveImageFile(){
+        var paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.CachesDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        let cacheDirectory = paths[0]
+        fileName = "\(cacheDirectory)/LLK"
+       
+       // 创建文件管理器
+       let fileManager :NSFileManager = NSFileManager.defaultManager()
+        
+        do {
+            try fileManager.createDirectoryAtPath(fileName, withIntermediateDirectories: true, attributes: nil)
+            print("创建成功")
+        } catch let error as NSError {
+            // 发生了错误
+            print(error.localizedDescription)
+        }
+    }
+    
+    /**
      下载图片方法
      */
     private func downImageData(){
@@ -157,22 +183,31 @@ class ReuseScrollView: UIView, UIScrollViewDelegate {
         for index in 0..<imagesUrlArray.count {
             operation.addExecutionBlock({ [weak self] in
                 
-                let imageData = NSData.init(contentsOfURL: NSURL.init(string: self!.imagesUrlArray[index])!)
-                
-                if imageData == nil{
-                    print("图片数据为空")
-                    return
-                }
-                
-                let image = UIImage.init(data: imageData!)
-                
-                self?.imagesArray[index] = image!
-                
-                dispatch_async(dispatch_get_main_queue(), { 
+                let fileNamePath = self!.fileName.stringByAppendingString("/\(index)")
+               
+                let localImageFile = NSData.init(contentsOfFile: fileNamePath)
+               
+                if localImageFile != nil{
+                    let image = UIImage.init(data: localImageFile!)
+                    self?.imagesArray[index] = image!
                     if self!.currentIndex == index{
                         self?.currentImageView.image = image!
                     }
-                })
+                }else{
+                    let imageData = NSData.init(contentsOfURL: NSURL.init(string: self!.imagesUrlArray[index])!)
+                    if imageData == nil{
+                        print("图片数据为空")
+                        return
+                    }
+                    let image = UIImage.init(data: imageData!)
+                    imageData?.writeToFile(fileNamePath, atomically: true)
+                    self?.imagesArray[index] = image!
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if self!.currentIndex == index{
+                            self?.currentImageView.image = image!
+                        }
+                    })
+                }
             })
         }
         

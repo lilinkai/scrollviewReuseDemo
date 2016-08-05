@@ -20,9 +20,8 @@ class ViewController: UIViewController {
         let urlArray = ["http://scimg.jb51.net/allimg/160618/77-16061Q44U6444.jpg",
                         "http://pic25.nipic.com/20121112/5955207_224247025000_2.jpg",
                         "http://www.pptbz.com/pptpic/UploadFiles_6909/201204/2012041411433867.jpg",
-                        "http://tx.haiqq.com/uploads/allimg/150327/2100245K1-8.jpg",
+                        "http://hbimg.b0.upaiyun.com/542c13f15df9b6817de85a224ab1ce9d33e3de541aa07-rQe8PX_fw658",
                         "http://img5.duitang.com/uploads/item/201508/25/20150825002604_PLTdw.thumb.224_0.png"]
-        
         
         for index in 1...5 {
             imageArray.append(UIImage.init(named: "\(index)")!)
