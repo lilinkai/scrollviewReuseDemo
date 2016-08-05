@@ -16,6 +16,7 @@
 		A66508D81D518F7800102A93 /* scrollviewReuseDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508D71D518F7800102A93 /* scrollviewReuseDemoUITests.swift */; };
 		A66508EA1D5194E500102A93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508E91D5194E500102A93 /* UIViewExtension.swift */; };
 		A66508EC1D51D4A200102A93 /* ReuseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */; };
+		A6DB66EF1D5485DD00B70737 /* 1111.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DB66EE1D5485DD00B70737 /* 1111.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A66508D91D518F7800102A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A66508E91D5194E500102A93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseScrollView.swift; sourceTree = "<group>"; };
+		A6DB66EE1D5485DD00B70737 /* 1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1111.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				A66508B91D518F7800102A93 /* ViewController.swift */,
 				A66508E91D5194E500102A93 /* UIViewExtension.swift */,
 				A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */,
+				A6DB66EE1D5485DD00B70737 /* 1111.png */,
 				A66508BB1D518F7800102A93 /* Main.storyboard */,
 				A66508BE1D518F7800102A93 /* Assets.xcassets */,
 				A66508C01D518F7800102A93 /* LaunchScreen.storyboard */,
@@ -238,6 +241,7 @@
 				A66508C21D518F7800102A93 /* LaunchScreen.storyboard in Resources */,
 				A66508BF1D518F7800102A93 /* Assets.xcassets in Resources */,
 				A66508BD1D518F7800102A93 /* Main.storyboard in Resources */,
+				A6DB66EF1D5485DD00B70737 /* 1111.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

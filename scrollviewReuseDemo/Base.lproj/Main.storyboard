@@ -25,15 +25,6 @@
                                     <constraint firstAttribute="width" constant="240" id="peL-Df-O2L"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9x-aL-qp1">
-                                <rect key="frame" x="34" y="28" width="86" height="71"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGx-eU-X0U">
-                                <rect key="frame" x="123" y="28" width="86" height="71"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Kv-Yx-WyU">
-                                <rect key="frame" x="212" y="28" width="86" height="71"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
