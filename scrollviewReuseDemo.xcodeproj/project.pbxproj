@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73BF339F1DF6BFEC00BB4603 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF339D1DF6BFEC00BB4603 /* UIViewExtension.swift */; };
+		73BF33A01DF6BFEC00BB4603 /* ReuseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF339E1DF6BFEC00BB4603 /* ReuseScrollView.swift */; };
+		73BF33A21DF6C0F500BB4603 /* 占位图.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BF33A11DF6C0F500BB4603 /* 占位图.png */; };
 		A66508B81D518F7800102A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508B71D518F7800102A93 /* AppDelegate.swift */; };
 		A66508BA1D518F7800102A93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508B91D518F7800102A93 /* ViewController.swift */; };
 		A66508BD1D518F7800102A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66508BB1D518F7800102A93 /* Main.storyboard */; };
@@ -14,8 +17,6 @@
 		A66508C21D518F7800102A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66508C01D518F7800102A93 /* LaunchScreen.storyboard */; };
 		A66508CD1D518F7800102A93 /* scrollviewReuseDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508CC1D518F7800102A93 /* scrollviewReuseDemoTests.swift */; };
 		A66508D81D518F7800102A93 /* scrollviewReuseDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508D71D518F7800102A93 /* scrollviewReuseDemoUITests.swift */; };
-		A66508EA1D5194E500102A93 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508E91D5194E500102A93 /* UIViewExtension.swift */; };
-		A66508EC1D51D4A200102A93 /* ReuseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */; };
 		A6DB66EF1D5485DD00B70737 /* 1111.png in Resources */ = {isa = PBXBuildFile; fileRef = A6DB66EE1D5485DD00B70737 /* 1111.png */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		73BF339D1DF6BFEC00BB4603 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		73BF339E1DF6BFEC00BB4603 /* ReuseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseScrollView.swift; sourceTree = "<group>"; };
+		73BF33A11DF6C0F500BB4603 /* 占位图.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "占位图.png"; sourceTree = "<group>"; };
 		A66508B41D518F7800102A93 /* scrollviewReuseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrollviewReuseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66508B71D518F7800102A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A66508B91D518F7800102A93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,8 +54,6 @@
 		A66508D31D518F7800102A93 /* scrollviewReuseDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scrollviewReuseDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A66508D71D518F7800102A93 /* scrollviewReuseDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrollviewReuseDemoUITests.swift; sourceTree = "<group>"; };
 		A66508D91D518F7800102A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A66508E91D5194E500102A93 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseScrollView.swift; sourceTree = "<group>"; };
 		A6DB66EE1D5485DD00B70737 /* 1111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1111.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,9 +107,10 @@
 			children = (
 				A66508B71D518F7800102A93 /* AppDelegate.swift */,
 				A66508B91D518F7800102A93 /* ViewController.swift */,
-				A66508E91D5194E500102A93 /* UIViewExtension.swift */,
-				A66508EB1D51D4A200102A93 /* ReuseScrollView.swift */,
 				A6DB66EE1D5485DD00B70737 /* 1111.png */,
+				73BF33A11DF6C0F500BB4603 /* 占位图.png */,
+				73BF339D1DF6BFEC00BB4603 /* UIViewExtension.swift */,
+				73BF339E1DF6BFEC00BB4603 /* ReuseScrollView.swift */,
 				A66508BB1D518F7800102A93 /* Main.storyboard */,
 				A66508BE1D518F7800102A93 /* Assets.xcassets */,
 				A66508C01D518F7800102A93 /* LaunchScreen.storyboard */,
@@ -202,13 +205,16 @@
 				TargetAttributes = {
 					A66508B31D518F7800102A93 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 					};
 					A66508C71D518F7800102A93 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = A66508B31D518F7800102A93;
 					};
 					A66508D21D518F7800102A93 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = A66508B31D518F7800102A93;
 					};
 				};
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73BF33A21DF6C0F500BB4603 /* 占位图.png in Resources */,
 				A66508C21D518F7800102A93 /* LaunchScreen.storyboard in Resources */,
 				A66508BF1D518F7800102A93 /* Assets.xcassets in Resources */,
 				A66508BD1D518F7800102A93 /* Main.storyboard in Resources */,
@@ -266,9 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A66508EA1D5194E500102A93 /* UIViewExtension.swift in Sources */,
+				73BF339F1DF6BFEC00BB4603 /* UIViewExtension.swift in Sources */,
 				A66508BA1D518F7800102A93 /* ViewController.swift in Sources */,
-				A66508EC1D51D4A200102A93 /* ReuseScrollView.swift in Sources */,
+				73BF33A01DF6BFEC00BB4603 /* ReuseScrollView.swift in Sources */,
 				A66508B81D518F7800102A93 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.gameLiving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0cf327ed-eaf8-4e83-ab22-2420c3f34789";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -430,6 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.feiyun.gameLiving;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "0cf327ed-eaf8-4e83-ab22-2420c3f34789";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -441,6 +450,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/scrollviewReuseDemo.app/scrollviewReuseDemo";
 			};
 			name = Debug;
@@ -453,6 +463,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/scrollviewReuseDemo.app/scrollviewReuseDemo";
 			};
 			name = Release;
@@ -464,6 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = scrollviewReuseDemo;
 			};
 			name = Debug;
@@ -475,6 +487,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.7k7k.scrollviewReuseDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = scrollviewReuseDemo;
 			};
 			name = Release;
